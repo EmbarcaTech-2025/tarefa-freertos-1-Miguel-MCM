@@ -83,8 +83,8 @@ int main() {
   xTaskCreate(led_task, "LED_Task", 256, NULL, 1, &led_task_handle);
   xTaskCreate(buzzer_task, "Buzzer_Task", 256, NULL, 1, &buzzer_task_handle);
   
-  xTaskCreate(buttons_A_task, "Buttons_A_Task", 256, NULL, 1, NULL);
-  xTaskCreate(buttons_B_task, "Buttons_B_Task", 256, NULL, 1, NULL);
+  xTaskCreate(buttons_A_task, "Buttons_A_Task", 256, NULL, 2, NULL);
+  xTaskCreate(buttons_B_task, "Buttons_B_Task", 256, NULL, 2, NULL);
 
   vTaskStartScheduler();
 
